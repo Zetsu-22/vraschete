@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} — {% endif %}{{ site.app_name }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap top-row">
+      <a class="brand" href="{{ '/' | relative_url }}">
+        <span class="logo" aria-hidden="true">₽</span>{{ site.app_name }}
+      </a>
+      <nav>
+        <a href="{{ '/' | relative_url }}#pro">Pro</a>
+        <a href="{{ '/offer/' | relative_url }}">Оферта</a>
+        <a href="{{ '/privacy/' | relative_url }}">Конфиденциальность</a>
+        <a href="{{ '/' | relative_url }}#contacts">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap {% if page.doc %}doc{% endif %}">
+    {{ content }}
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <div>
+        <strong>Самозанятый {{ site.seller_name }}</strong><br>
+        ИНН {{ site.seller_inn }}, г. {{ site.seller_city }}
+      </div>
+      <div>
+        <a href="mailto:{{ site.contact_email }}">{{ site.contact_email }}</a><br>
+        {{ site.contact_phone }}{% if site.contact_telegram != "" %} · Telegram {{ site.contact_telegram }}{% endif %}
+      </div>
+      <div>
+        <a href="{{ '/offer/' | relative_url }}">Публичная оферта</a><br>
+        <a href="{{ '/privacy/' | relative_url }}">Политика конфиденциальности</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
