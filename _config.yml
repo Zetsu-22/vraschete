@@ -18,8 +18,8 @@ contact_telegram: ""                         # по желанию: @username (�
 app_name: "В расчёте"
 pro_price: "299"
 refund_days: 14
-max_devices: 10
-docs_date: "2 октября 2026 г."
+max_devices: 5
+docs_date: "13 октября 2026 г."
 
 title: "В расчёте — учёт долгов и кредитов"
 description: "Приложение для Android: кто кому должен, кредиты, рассрочки и напоминания о платежах. Данные хранятся только на телефоне."
